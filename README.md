@@ -1,5 +1,6 @@
 # cashpositive-blog
 
+# FRONT-END JAVASCRIPT ASSIGNMENT - BLOG
 
 # Installation
 To install all the dependendencies.
