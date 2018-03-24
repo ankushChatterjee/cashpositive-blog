@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import loginAction from '../actions/loginAction';
-
+import '../styles/login.css';
 
 @connect((store)=>{
     return {
@@ -21,7 +21,7 @@ export default class Login extends React.Component{
                 <form id="loginform">
                     <input placeholder="Enter Username" onChange={this.setUserName.bind(this)} value={this.state.username} id="username" type="username" />
                     <input placeholder="Enter Password"  onChange={this.setPassword.bind(this)} value={this.state.password} id="password" type="password" />
-                    <input type="submit" value="Log In" />
+                    <input id="loginbutton" type="submit" value="Log In" />
                 </form>
             </div>
         );  

@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import BlogCard from '../components/BlogCard';
 
+import '../styles/feed.css';
+
 @connect((store)=>{
     return {
         data:store
