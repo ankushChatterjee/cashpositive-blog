@@ -44,6 +44,8 @@ yarn run build
 
 ### When Read More is Clicked/tapped
 
+### By Clicking follow user can be followed.
+
 ##### Mobile
 ![alt text](https://raw.githubusercontent.com/ankushChatterjee/cashpositive-blog/master/screenshots/iphone_readmore.PNG "200")
 ##### Desktop (when a card is hovered)
