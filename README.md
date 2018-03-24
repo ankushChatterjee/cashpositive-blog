@@ -20,9 +20,10 @@ yarn run build
 # Technologies Used
 1. ReactJS
 2. Redux
-3. yarn
-4. ParcelJS (for module loading and building)
-5. Firebase (for deployment)
+3. React Router 
+4. yarn
+5. ParcelJS (for module loading and building)
+6. Firebase (for deployment)
 
 
 
@@ -31,7 +32,7 @@ yarn run build
 
 ##### Mobile
 ![alt text](https://raw.githubusercontent.com/ankushChatterjee/cashpositive-blog/master/screenshots/iphone_login.PNG "200")
-##### Desktop
+##### Desktop(The error is displayed because the values entered are blank)
 ![alt text](https://raw.githubusercontent.com/ankushChatterjee/cashpositive-blog/master/screenshots/desktop_login.png "Mobile") 
 
 ### Feed
