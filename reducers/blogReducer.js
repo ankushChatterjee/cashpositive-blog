@@ -13,7 +13,7 @@ export default function blogReducer(state={
             for(let a of state.articles){ // To deep copy array of objects
                 art.push({...a});
             }
-            art.push(action.payload);
+            art.unshift(action.payload);
             return {...state,articles:art};
         break;
         default:

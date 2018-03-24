@@ -31,7 +31,13 @@
 }
 .blogContent{
     padding-left:2em; 
-    padding-bottom: 1.2em;
+    padding-bottom: 2em;
+    text-overflow: ellipsis;
+    font-size: 1em;
+    height: 0.2em;
+    width: 40vw;
+    white-space: nowrap;
+    overflow: hidden;
 }
 #add{
     border: none;
@@ -51,6 +57,26 @@
 #add:hover{
     transform: scale(1.1);
 }
+
+#readmore{
+    background: #5ba8e0;
+    border-radius: 5px;
+    /* position: relative; */
+    bottom: 20px;
+    left: 20px;
+    width: 7em;
+    color:#fff;
+    text-align: center;
+    padding: 0.3em;
+    float: right;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px 0px #aaa;
+}
+
+#readmore:hover{
+    background: #0191de;
+}
+
 @media only screen and (max-width: 600px) {
     .blogcard{
         width: 90%;

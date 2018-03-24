@@ -72,6 +72,7 @@ body,html{
     align-items: center;
     box-shadow: 0px 0px 12px 0px black;
     margin-bottom:1em; 
+    z-index: 2;
 }
 #back{
     border-radius: 100%;
@@ -88,6 +89,47 @@ body,html{
     font-size: 1.3em;
     flex-grow: 1;
     text-align: center;
+}.modal {
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    border-radius: 7px;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modalTitle{
+    color:#0191de;
+}
+.modalUsername{
+    font-weight: bold;
+}
+.modalContent{
+    line-height: 2em;
 }.feed{
     margin-top: 5em;; 
 }
@@ -121,7 +163,13 @@ body,html{
 }
 .blogContent{
     padding-left:2em; 
-    padding-bottom: 1.2em;
+    padding-bottom: 2em;
+    text-overflow: ellipsis;
+    font-size: 1em;
+    height: 0.2em;
+    width: 40vw;
+    white-space: nowrap;
+    overflow: hidden;
 }
 #add{
     border: none;
@@ -141,6 +189,26 @@ body,html{
 #add:hover{
     transform: scale(1.1);
 }
+
+#readmore{
+    background: #5ba8e0;
+    border-radius: 5px;
+    /* position: relative; */
+    bottom: 20px;
+    left: 20px;
+    width: 7em;
+    color:#fff;
+    text-align: center;
+    padding: 0.3em;
+    float: right;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px 0px #aaa;
+}
+
+#readmore:hover{
+    background: #0191de;
+}
+
 @media only screen and (max-width: 600px) {
     .blogcard{
         width: 90%;
