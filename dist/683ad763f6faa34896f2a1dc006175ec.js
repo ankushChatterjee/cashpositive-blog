@@ -21288,6 +21288,13 @@ var Feed = (_dec = (0, _reactRedux.connect)(function (store) {
                 i++;
                 return _react2.default.createElement(_BlogCard2.default, { showModal: _this2.showModal.bind(_this2), data: item, key: i });
             });
+            if (!this.props.data.loggedIn) {
+                return _react2.default.createElement(
+                    'div',
+                    { className: 'blogcard loginplease' },
+                    'Please Log In'
+                );
+            }
             return _react2.default.createElement(
                 'div',
                 { className: 'feed' },
@@ -25966,7 +25973,7 @@ exports.default = [{
 }, {
     username: "timeo",
     picture: "https://randomuser.me/api/portraits/men/35.jpg",
-    blogTitle: "Understanding India",
+    blogTitle: "Real India",
     blogContent: "India is great"
 }, {
     username: "oğuzhan",
@@ -26105,7 +26112,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var AddPost = (_dec = (0, _reactRedux.connect)(function (store) {
     return {
-        username: store.username
+        username: store.username,
+        loggedIn: store.loggedIn
     };
 }), _dec(_class = function (_React$Component) {
     _inherits(AddPost, _React$Component);
@@ -26122,6 +26130,13 @@ var AddPost = (_dec = (0, _reactRedux.connect)(function (store) {
     _createClass(AddPost, [{
         key: 'render',
         value: function render() {
+            if (!this.props.loggedIn) {
+                return _react2.default.createElement(
+                    'div',
+                    { className: 'blogcard loginplease' },
+                    'Please Log In'
+                );
+            }
             console.log(this.props.username);
             return _react2.default.createElement(
                 'div',
@@ -26225,7 +26240,7 @@ _reactDom2.default.render(_react2.default.createElement(
         )
     )
 ), app);
-},{"react":10,"react-dom":12,"./pages/Login":4,"./pages/Feed":5,"react-router-dom":11,"react-redux":13,"./store/store":3,"./pages/AddPost":6}],139:[function(require,module,exports) {
+},{"react":10,"react-dom":12,"./pages/Login":4,"./pages/Feed":5,"react-router-dom":11,"react-redux":13,"./store/store":3,"./pages/AddPost":6}],140:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -26348,5 +26363,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[139,2])
+},{}]},{},[140,2])
 //# sourceMappingURL=/dist/683ad763f6faa34896f2a1dc006175ec.map

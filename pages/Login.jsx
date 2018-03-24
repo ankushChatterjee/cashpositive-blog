@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 
 import loginAction from '../actions/loginAction';
 import '../styles/login.css';
-
 @connect((store)=>{
     return {
         data:store.loggedIn

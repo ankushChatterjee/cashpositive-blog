@@ -8,6 +8,7 @@
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
+    animation: fadeIn 0.2s linear;
 }
 
 .modal-content {
@@ -39,4 +40,12 @@
 }
 .modalContent{
     line-height: 2em;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }

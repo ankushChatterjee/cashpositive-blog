@@ -39,7 +39,7 @@ export default [
     {
         username:"timeo",
         picture:"https://randomuser.me/api/portraits/men/35.jpg",
-        blogTitle:"Understanding India",
+        blogTitle:"Real India",
         blogContent:"India is great"
     },
     {

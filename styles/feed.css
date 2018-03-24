@@ -10,7 +10,13 @@
     border-radius: 7px;
     padding-bottom: 0px;
     display: flex;
+    transition: transform 0.2s linear;
 }
+
+.blogcard:hover{
+    transform: scale(1.1);
+}
+
 .picture{
     border-radius:50%;
     margin: 0.5em;
@@ -59,7 +65,7 @@
 }
 
 #readmore{
-    background: #5ba8e0;
+    background: #0191de;
     border-radius: 5px;
     /* position: relative; */
     bottom: 20px;
@@ -74,8 +80,13 @@
 }
 
 #readmore:hover{
-    background: #0191de;
+    background: #086fa7;
 }
+
+.loginplease{
+    padding: 3em;
+}
+
 
 @media only screen and (max-width: 600px) {
     .blogcard{

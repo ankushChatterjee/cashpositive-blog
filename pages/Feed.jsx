@@ -20,6 +20,13 @@ export default class Feed extends React.Component{
             i++;
             return <BlogCard showModal={this.showModal.bind(this)} data={item} key={i} />
         });
+        if(!this.props.data.loggedIn){
+            return(
+                <div className="blogcard loginplease">
+                    Please Log In
+                </div>
+            )
+        }
         return(
             <div className="feed">
             <Header title="Feed" />
