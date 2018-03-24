@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import { NavLink } from 'react-router-dom';
 import loginAction from '../actions/loginAction';
 
 
@@ -39,10 +38,11 @@ export default class Login extends React.Component{
         evt.preventDefault();
         if(this.state.username!=="" && this.state.password!==""){
             this.setState({okay:true,error:""});
-            this.props.dispatch(loginAction:true);
+            this.props.dispatch({type:'ACTION_LOGIN_CHANGE',payload:true});
             this.props.history.push("/feed");
         }else{
             this.setState({error:'Enter The values'});
+            this.props.dispatch({type:'ACTION_LOGIN_CHANGE',payload:false});
         }
     }
 }
