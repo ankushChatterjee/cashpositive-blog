@@ -13,7 +13,7 @@ import '../styles/feed.css';
 export default class Feed extends React.Component{
     constructor(props){
         super(props);
-        this.state = {modalShoe:false,title:"",content:"",username:""};
+        this.state = {modalShoe:false,title:"",content:"",username:"",followed:false};
     }
     render(){
         let i=0;
@@ -38,7 +38,7 @@ export default class Feed extends React.Component{
                         <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
                         <path d="M0 0h24v24H0z" fill="none"/>
                     </svg></button>
-                <Modal closeModal={this.closeModal.bind(this)}  show={this.state.modalShow} title={this.state.title} content={this.state.content} username={this.state.username} />
+                <Modal  closeModal={this.closeModal.bind(this)}  show={this.state.modalShow} title={this.state.title} content={this.state.content} username={this.state.username} />
             </div>
         );  
     }
@@ -46,9 +46,11 @@ export default class Feed extends React.Component{
        this.props.history.push('/add');
     }
     showModal(title,username,content){
+        
         this.setState({modalShow:true,title:title,content:content,username:username});
     }
     closeModal(){
         this.setState({modalShow:false});
     }
+    
 }

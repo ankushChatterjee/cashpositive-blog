@@ -42,6 +42,14 @@
 .modalContent{
     line-height: 2em;
 }
+.follow{
+    background: #0191de;
+    color:#fff;
+    padding: 0.3em;
+    margin:0.3em;
+    border-radius: 5px;
+    cursor: pointer;
+}
 @-webkit-keyframes fadeIn{
     from{
         opacity: 0;
