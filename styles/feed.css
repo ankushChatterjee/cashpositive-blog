@@ -121,4 +121,7 @@
         width: 5em ;
         margin-top: 1em;
     }
+    .blogTitle{
+        font-weight: lighter;
+    }
 }
