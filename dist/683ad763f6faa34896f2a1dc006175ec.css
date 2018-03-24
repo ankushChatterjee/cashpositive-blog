@@ -73,7 +73,7 @@ body,html{
 }
 .picture{
     border-radius:50%;
-    padding: 0.5em;
+    margin: 0.5em;
    
 }
 .blogTitle{
@@ -119,5 +119,47 @@ body,html{
     .picture{
         height: 5em ;
         width: 5em ;
+        margin-top: 1em;
     }
+}.addform{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+    margin-top:10vh; 
+}
+
+#content{
+    width: 95vw;
+    height: 66vh;
+    border: none;
+    padding: 0.5em;
+    font-size: 1em;
+    border-radius: 7px;
+}
+#title{
+    width: 95vw;
+    font-size: 2.5em;
+    border: none;
+    padding: 0.5em;
+    border-radius: 7px;
+}
+
+#postadd{
+    border: none;
+    padding:1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-top-left-radius: 7px; 
+    border-top-right-radius: 7px;
+    cursor: pointer;
+    margin-top: 1em; 
+    background: #0191de;
+    color: #fff;
+    width: 40vw;
+    transition: all 0.2s linear;
+}
+#postadd:hover{
+    background: #0d70a5;
 }

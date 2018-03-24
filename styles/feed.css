@@ -10,7 +10,7 @@
 }
 .picture{
     border-radius:50%;
-    padding: 0.5em;
+    margin: 0.5em;
    
 }
 .blogTitle{
@@ -56,5 +56,6 @@
     .picture{
         height: 5em ;
         width: 5em ;
+        margin-top: 1em;
     }
 }
