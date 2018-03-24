@@ -15,9 +15,7 @@ export default class Login extends React.Component{
         this.state = {okay:false,username:"",password:"",error:null};
     }
     render(){
-        console.log(this.state);
         return(
-            
             <div onSubmit={this.checkValue.bind(this)} className="login">
                 <div className="error">{this.state.error}</div>
                 <form id="loginform">
@@ -38,7 +36,7 @@ export default class Login extends React.Component{
         evt.preventDefault();
         if(this.state.username!=="" && this.state.password!==""){
             this.setState({okay:true,error:""});
-            this.props.dispatch({type:'ACTION_LOGIN_CHANGE',payload:true});
+            this.props.dispatch({type:'ACTION_LOGIN_CHANGE',payload:{loggedIn:true,username:this.state.username}});
             this.props.history.push("/feed");
         }else{
             this.setState({error:'Enter The values'});
