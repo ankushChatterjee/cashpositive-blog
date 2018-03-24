@@ -21036,7 +21036,89 @@ var BlogCard = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = BlogCard;
-},{"react":12}],9:[function(require,module,exports) {
+},{"react":12}],135:[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":17}],134:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+require('../styles/header.css');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Header = function (_React$Component) {
+    _inherits(Header, _React$Component);
+
+    function Header() {
+        _classCallCheck(this, Header);
+
+        return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+    }
+
+    _createClass(Header, [{
+        key: 'render',
+        value: function render() {
+            if (this.props.backEnabled) {
+                return _react2.default.createElement(
+                    'header',
+                    null,
+                    _react2.default.createElement(
+                        'span',
+                        { onClick: this.props.goBack },
+                        ' ',
+                        _react2.default.createElement(
+                            'svg',
+                            { id: 'back', fill: '#FFFFFF', height: '36', viewBox: '0 0 24 24', width: '36', xmlns: 'http://www.w3.org/2000/svg' },
+                            _react2.default.createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }),
+                            _react2.default.createElement('path', { d: 'M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z' })
+                        ),
+                        ' '
+                    ),
+                    _react2.default.createElement(
+                        'span',
+                        { id: 'headertitle' },
+                        this.props.title
+                    )
+                );
+            } else {
+                return _react2.default.createElement(
+                    'header',
+                    null,
+                    _react2.default.createElement(
+                        'span',
+                        { id: 'headertitle' },
+                        this.props.title
+                    )
+                );
+            }
+        }
+    }]);
+
+    return Header;
+}(_react2.default.Component);
+
+exports.default = Header;
+},{"react":12,"../styles/header.css":135}],9:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -21063,6 +21145,10 @@ var _reactRedux = require('react-redux');
 var _BlogCard = require('../components/BlogCard');
 
 var _BlogCard2 = _interopRequireDefault(_BlogCard);
+
+var _Header = require('../components/Header');
+
+var _Header2 = _interopRequireDefault(_Header);
 
 require('../styles/feed.css');
 
@@ -21098,6 +21184,7 @@ var Feed = (_dec = (0, _reactRedux.connect)(function (store) {
             return _react2.default.createElement(
                 'div',
                 { className: 'feed' },
+                _react2.default.createElement(_Header2.default, { title: 'Feed' }),
                 _react2.default.createElement(
                     'div',
                     { id: 'postlist' },
@@ -21125,7 +21212,7 @@ var Feed = (_dec = (0, _reactRedux.connect)(function (store) {
     return Feed;
 }(_react2.default.Component)) || _class);
 exports.default = Feed;
-},{"react":12,"react-redux":14,"../components/BlogCard":13,"../styles/feed.css":9}],60:[function(require,module,exports) {
+},{"react":12,"react-redux":14,"../components/BlogCard":13,"../components/Header":134,"../styles/feed.css":9}],60:[function(require,module,exports) {
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -25886,6 +25973,10 @@ var _reactRedux = require('react-redux');
 
 require('../styles/add.css');
 
+var _Header = require('../components/Header');
+
+var _Header2 = _interopRequireDefault(_Header);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25916,13 +26007,18 @@ var AddPost = (_dec = (0, _reactRedux.connect)(function (store) {
             console.log(this.props.username);
             return _react2.default.createElement(
                 'div',
-                { className: 'addpage' },
+                null,
+                _react2.default.createElement(_Header2.default, { title: 'Add Blog Post', backEnabled: true, goBack: this.goBack.bind(this) }),
                 _react2.default.createElement(
-                    'form',
-                    { className: 'addform', onSubmit: this.addPost.bind(this) },
-                    _react2.default.createElement('input', { placeholder: 'Title', id: 'title', onChange: this.titleChange.bind(this), value: this.state.title }),
-                    _react2.default.createElement('textarea', { placeholder: 'Your thoughts', id: 'content', onChange: this.contentChange.bind(this), value: this.state.content }),
-                    _react2.default.createElement('input', { id: 'postadd', type: 'submit', value: 'Add Post' })
+                    'div',
+                    { className: 'addpage' },
+                    _react2.default.createElement(
+                        'form',
+                        { className: 'addform', onSubmit: this.addPost.bind(this) },
+                        _react2.default.createElement('input', { placeholder: 'Title', id: 'title', onChange: this.titleChange.bind(this), value: this.state.title }),
+                        _react2.default.createElement('textarea', { placeholder: 'Your thoughts', id: 'content', onChange: this.contentChange.bind(this), value: this.state.content }),
+                        _react2.default.createElement('input', { id: 'postadd', type: 'submit', value: 'Add Post' })
+                    )
                 )
             );
         }
@@ -25950,12 +26046,17 @@ var AddPost = (_dec = (0, _reactRedux.connect)(function (store) {
                 this.props.history.push('/feed');
             }
         }
+    }, {
+        key: 'goBack',
+        value: function goBack() {
+            this.props.history.push('/feed');
+        }
     }]);
 
     return AddPost;
 }(_react2.default.Component)) || _class);
 exports.default = AddPost;
-},{"react":12,"react-redux":14,"../styles/add.css":10}],2:[function(require,module,exports) {
+},{"react":12,"react-redux":14,"../styles/add.css":10,"../components/Header":134}],2:[function(require,module,exports) {
 'use strict';
 
 var _react = require('react');
@@ -26006,7 +26107,7 @@ _reactDom2.default.render(_react2.default.createElement(
         )
     )
 ), app);
-},{"react":12,"react-dom":16,"./pages/Login":3,"./pages/Feed":6,"react-router-dom":15,"react-redux":14,"./store/store":4,"./pages/AddPost":5}],133:[function(require,module,exports) {
+},{"react":12,"react-dom":16,"./pages/Login":3,"./pages/Feed":6,"react-router-dom":15,"react-redux":14,"./store/store":4,"./pages/AddPost":5}],152:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -26129,5 +26230,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[133,2])
+},{}]},{},[152,2])
 //# sourceMappingURL=/dist/683ad763f6faa34896f2a1dc006175ec.map

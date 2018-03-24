@@ -45,7 +45,6 @@ body,html{
 }
 #loginbutton:hover{
     background: #0d70a5;
-    transform: scaleY(1.1);
 }
 #username:focus,#password:focus{
     border-color: #0191de;

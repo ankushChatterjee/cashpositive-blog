@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import '../styles/add.css';
+import Header from '../components/Header';
+
 @connect((store)=>{
     return {
         username:store.username
@@ -13,14 +15,15 @@ export default class AddPost extends React.Component {
     }
     render(){
         console.log(this.props.username);
-        return(
+        return(<div>
+            <Header title="Add Blog Post" backEnabled={true} goBack={this.goBack.bind(this)}  />
             <div className="addpage">
                 <form className="addform" onSubmit={this.addPost.bind(this)}>
                     <input placeholder="Title" id="title" onChange={this.titleChange.bind(this)} value={this.state.title} />
                     <textarea placeholder="Your thoughts" id="content" onChange={this.contentChange.bind(this)} value={this.state.content} />
                     <input id="postadd" type="submit" value="Add Post" />
                 </form>
-            </div>
+            </div></div>
         );
     }
     titleChange(evt){
@@ -40,5 +43,8 @@ export default class AddPost extends React.Component {
             }});
             this.props.history.push('/feed');
         }
+    }
+    goBack(){
+        this.props.history.push('/feed');
     }
 }

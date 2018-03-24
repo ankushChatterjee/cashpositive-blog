@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import BlogCard from '../components/BlogCard';
-
+import Header from '../components/Header';
 import '../styles/feed.css';
 
 @connect((store)=>{
@@ -18,6 +18,7 @@ export default class Feed extends React.Component{
         });
         return(
             <div className="feed">
+            <Header title="Feed" />
                 <div id="postlist">{elements}
                 </div>
                 <button id="add" onClick={this.addArticle.bind(this)}>
