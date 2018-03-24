@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import loginAction from '../actions/loginAction';
 import '../styles/login.css';
 @connect((store)=>{
     return {
@@ -14,14 +13,17 @@ export default class Login extends React.Component{
         this.state = {okay:false,username:"",password:"",error:null};
     }
     render(){
-        return(
-            <div onSubmit={this.checkValue.bind(this)} className="login">
-                <div className="error">{this.state.error}</div>
-                <form id="loginform">
-                    <input placeholder="Enter Username" onChange={this.setUserName.bind(this)} value={this.state.username} id="username" type="username" />
-                    <input placeholder="Enter Password"  onChange={this.setPassword.bind(this)} value={this.state.password} id="password" type="password" />
-                    <input id="loginbutton" type="submit" value="Log In" />
-                </form>
+        return(<div>
+                
+                <div  className="login">
+                    <div className="logintext"> Login </div>
+                    <div className="error">{this.state.error}</div>
+                    <form onSubmit={this.checkValue.bind(this)} id="loginform">
+                        <input placeholder="Enter Username" onChange={this.setUserName.bind(this)} value={this.state.username} id="username" type="username" />
+                        <input placeholder="Enter Password"  onChange={this.setPassword.bind(this)} value={this.state.password} id="password" type="password" />
+                        <input id="loginbutton" type="submit" value="Log In" />
+                    </form>
+                </div>
             </div>
         );  
     }

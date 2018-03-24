@@ -28,7 +28,7 @@ export default class AddPost extends React.Component {
             <div className="addpage">
                 <form className="addform" onSubmit={this.addPost.bind(this)}>
                     <input placeholder="Title" id="title" onChange={this.titleChange.bind(this)} value={this.state.title} />
-                    <textarea placeholder="Your thoughts" id="content" onChange={this.contentChange.bind(this)} value={this.state.content} />
+                    <textarea rows="50" placeholder="Your thoughts" id="content" onChange={this.contentChange.bind(this)} value={this.state.content} />
                     <input id="postadd" type="submit" value="Add Post" />
                 </form>
             </div></div>

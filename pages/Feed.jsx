@@ -4,6 +4,7 @@ import BlogCard from '../components/BlogCard';
 import Header from '../components/Header';
 import Modal from '../components/Modal';
 import '../styles/feed.css';
+
 @connect((store)=>{
     return {
         data:store

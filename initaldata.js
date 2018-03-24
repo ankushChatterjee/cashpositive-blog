@@ -22,19 +22,39 @@ export default [
         username:"julian",
         picture:"https://randomuser.me/api/portraits/women/77.jpg",
         blogTitle:"Physics Gods",
-        blogContent:"I love Physics"
+        blogContent:`As I opened the CT scan last week to read the next case, I was baffled. The history simply read “gunshot wound.” I have been a radiologist in one of the busiest trauma centers in the nation for 13 years, and have diagnosed thousands of handgun injuries to the brain, lung, liver, spleen, bowel, and other vital organs. I thought that I knew all that I needed to know about gunshot wounds, but the specific pattern of injury on my computer screen was one that I had seen only once before.
+
+        In a typical handgun injury that I diagnose almost daily, a bullet leaves a laceration through an organ like the liver. To a radiologist, it appears as a linear, thin, grey bullet track through the organ. There may be bleeding and some bullet fragments.
+        
+        I was looking at a CT scan of one of the victims of the shooting at Marjory Stoneman Douglas High School, who had been brought to the trauma center during my call shift. The organ looked like an overripe melon smashed by a sledgehammer, with extensive bleeding. How could a gunshot wound have caused this much damage?
+        
+        The reaction in the emergency room was the same. One of the trauma surgeons opened a young victim in the operating room, and found only shreds of the organ that had been hit by a bullet from an AR-15, a semi-automatic rifle which delivers a devastatingly lethal, high-velocity bullet to the victim. There was nothing left to repair, and utterly, devastatingly, nothing that could be done to fix the problem. The injury was fatal.`
     },
     {
         username:"charlotte",
         picture:"https://randomuser.me/api/portraits/women/7.jpg",
         blogTitle:"Love and War",
-        blogContent:"Love is good"
+        blogContent:`Routine handgun injuries leave entry and exit wounds and linear tracks through the victim’s body that are roughly the size of the bullet. If the bullet does not directly hit something crucial like the heart or the aorta, and they do not bleed to death before being transported to our care at a trauma center, chances are, we can save the victim. The bullets fired by an AR-15 are different; they travel at higher velocity and are far more lethal. The damage they cause is a function of the energy they impart as they pass through the body. A typical AR-15 bullet leaves the barrel traveling almost three times faster than, and imparting more than three times the energy of, a typical 9mm bullet from a handgun. An AR-15 rifle outfitted with a magazine cartridge with 50 rounds allows many more lethal bullets to be delivered quickly without reloading.
+
+        I have seen a handful of AR-15 injuries in my career. I saw one from a man shot in the back by a SWAT team years ago. The injury along the path of the bullet from an AR-15 is vastly different from a low-velocity handgun injury. The bullet from an AR-15 passes through the body like a cigarette boat travelling at maximum speed through a tiny canal. The tissue next to the bullet is elastic — moving away from the bullet like waves of water displaced by the boat — and then returns and settles back. This process is called cavitation; it leaves the displaced tissue damaged or killed. The high-velocity bullet causes a swath of tissue damage that extends several inches from its path. It does not have to actually hit an artery to damage it and cause catastrophic bleeding. Exit wounds can be the size of an orange.`
     },
     {
         username:"becky",
         picture:"https://randomuser.me/api/portraits/women/92.jpg",
         blogTitle:"Painting with brushes",
-        blogContent:"colors colors"
+        blogContent:`How To Fix
+        Some of these issues are related to the default iOS font: San Francisco. When iOS renders the system font, it automatically includes tracking based on the point size. This automatically-applied tracking table is available on Apple’s website. There is a Sketch plugin called “SF Font Fixer” which reflects these values in Sketch. I highly recommend it if your design uses San Francisco.
+        
+        (Side Note: Always remember to make the text box wrap tightly around text in Sketch. This can be done by selecting the text and toggling between “Fixed” and “Auto” alignment, then resetting the width of the text box. If there is any extra spacing, this can easily lead to incorrect values being entered into the layout.)
+        
+        2. Shadows
+        Unlike typography which has universal layout rules, shadows are less well-defined.
+        
+        As we can see in the image above, shadows in iOS are larger by default. In the examples above, this makes the most difference on the top edges of the rectangles.
+        
+        Shadows are tricky because the parameters between Sketch and iOS are not the same. The biggest difference is that there is no concept of “spread” on a CALayer, although this can be overcome by increasing the size of the layer that contains the shadow.
+        
+        `
     },
     {
         username:"timeo",
