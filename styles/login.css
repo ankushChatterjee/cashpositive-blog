@@ -1,5 +1,6 @@
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 body,html{
     width: 100%;
@@ -15,13 +16,19 @@ body,html{
     padding: 2em;
     margin:15% auto;
     width: 20em;
-    box-shadow: 0px 0px 4px 0px #666;
+    -webkit-box-shadow: 0px 0px 4px 0px #666;
+            box-shadow: 0px 0px 4px 0px #666;
     border-radius: 7px;
     padding-bottom: 0px
 }
 #loginform{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     overflow-y: hidden;
 }
 #username,#password{
@@ -42,6 +49,8 @@ body,html{
     margin-top: 1em; 
     background: #0191de;
     color: #fff;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
 #loginbutton:hover{

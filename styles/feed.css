@@ -6,15 +6,24 @@
     padding: 0.5em;
     margin: 1em auto;
     width: 60%;
-    box-shadow: 0px 0px 4px 0px #666;
+    -webkit-box-shadow: 0px 0px 4px 0px #666;
+            box-shadow: 0px 0px 4px 0px #666;
     border-radius: 7px;
     padding-bottom: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-transition: -webkit-transform 0.2s linear;
+    transition: -webkit-transform 0.2s linear;
+    -o-transition: transform 0.2s linear;
     transition: transform 0.2s linear;
+    transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
 .blogcard:hover{
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 .picture{
@@ -38,7 +47,8 @@
 .blogContent{
     padding-left:2em; 
     padding-bottom: 2em;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     font-size: 1em;
     height: 0.2em;
     width: 40vw;
@@ -54,14 +64,26 @@
     background:#0191de;
     height: 5em;
     width: 5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     cursor: pointer;
+    -webkit-transition: -webkit-transform 0.2s linear;
+    transition: -webkit-transform 0.2s linear;
+    -o-transition: transform 0.2s linear;
     transition: transform 0.2s linear;
+    transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 #add:hover{
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 #readmore{
@@ -76,7 +98,8 @@
     padding: 0.3em;
     float: right;
     cursor: pointer;
-    box-shadow: 0px 0px 8px 0px #aaa;
+    -webkit-box-shadow: 0px 0px 8px 0px #aaa;
+            box-shadow: 0px 0px 8px 0px #aaa;
 }
 
 #readmore:hover{
