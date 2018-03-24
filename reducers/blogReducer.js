@@ -15,6 +15,9 @@ export default function blogReducer(state={
             art.push(action.payload);
             return {...state,articles:art};
         break;
+        default:
+            return state;
+        break;
     }
 
 }
