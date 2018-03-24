@@ -40,7 +40,7 @@ export default class Login extends React.Component{
             this.props.dispatch({type:'ACTION_LOGIN_CHANGE',payload:{loggedIn:true,username:this.state.username}});
             this.props.history.push("/feed");
         }else{
-            this.setState({error:'Enter The values'});
+            this.setState({error:'Incorrect Credentials'});
             this.props.dispatch({type:'ACTION_LOGIN_CHANGE',payload:false});
         }
     }
